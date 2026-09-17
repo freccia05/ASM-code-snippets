@@ -1,3 +1,5 @@
+;set vars
+
 LDA #$00
 STA $0200
 
@@ -10,12 +12,13 @@ STA $0202
 LDA #$3F
 STA $0203
 
-
+;call sub
 JSR getMantissa
 
-LDA $0210     ; A = 00
-LDA $0211     ; A = 00
-LDA $0212     ; A = BF
+;return answers
+LDA $0210
+LDA $0211
+LDA $0212
 
 BRK
 
@@ -24,8 +27,8 @@ getMantissa:
 ;loop and copy
 LDX #$00
 LOOP:
-LDA $0201,X   ; read source byte
-STA $0210,X   ; write it one slot lower in the result
+LDA $0201,X   ; read 
+STA $0210,X   ; write
 INX
 CPX #$03
 BNE LOOP
