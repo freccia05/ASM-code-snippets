@@ -1,5 +1,3 @@
-(store four test bytes into $0200-$0203)
-
 LDA #$00
 STA $0200
 
