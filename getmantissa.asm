@@ -1,3 +1,6 @@
+;Get Mantissa
+;Author: Mariano Soares
+
 ;set vars
 
 LDA #$00
