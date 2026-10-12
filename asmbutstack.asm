@@ -1,6 +1,9 @@
 ;asmcallstack
 ;Author: Mariano Soares
 
+
+; main():
+
 ;85.125
 LDA #$00
 STA $0200
