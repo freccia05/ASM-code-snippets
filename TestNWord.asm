@@ -1,5 +1,6 @@
 ;TestNWord.asm
 ;Author: Mariano Soares
+*=$0600
 
 LDA #$01        ; N = 1
 PHA
@@ -56,9 +57,11 @@ PLA
 BRK
 
 ; Test data, little-endian (low byte first)
-Q1:     .byte $E4
-R1:     .byte $F0
-Q2:     .byte $C3, $03
-R2:     .byte $C3, $01
-Q3:     .byte $01, $63, $00, $00
-R3:     .byte $24, $D8, $FF, $FF
+Q1      !byte $E4
+R1      !byte $F0
+Q2      !byte $C3, $03
+R2      !byte $C3, $01
+Q3      !byte $01, $63, $00, $00
+R3      !byte $24, $D8, $FF, $FF
+
+!src "SubNWord.asm"
